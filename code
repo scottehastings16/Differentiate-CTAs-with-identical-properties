@@ -1,0 +1,12 @@
+//Get all elements I want to select in one array 
+var myArr1 = document.querySelectorAll(".cta-block")
+var myArr2 = [];
+for (var i = 0 ; i < myArr1.length; i++){
+    if (myArr1[i].innerText.toLowerCase().indexOf("start")>-1){
+        myArr2.push(myArr1[i])
+    }
+}
+//Add an attribute to all the elements in my new array
+for (var i = 0 ; i < myArr2.length; i++){
+    myArr2[i].setAttribute("data-analytics",i.toString())
+}
